@@ -31,13 +31,13 @@ def notify():
       
       if logs['webhookId']==os.environ['ALCHEMY_KEY'] and category == 'token':
         # extract the necessary information
-        txhash = from_address = "["+str(logs['event']['activity'][0]['hash'])+"](https://etherscan.io/tx/"+str(logs['event']['activity'][0]['hash'])+")"
+        txhash = from_address = "["+str(logs['event']['activity'][0]['hash'])+"](https://polygonscan.com/tx/"+str(logs['event']['activity'][0]['hash'])+")"
          
-        from_address = "["+str(logs['event']['activity'][0]['fromAddress'])+"](https://etherscan.io/address/"+str(logs['event']['activity'][0]['fromAddress'])+"#tokentxns)"
-        to_address = "["+str(logs['event']['activity'][0]['toAddress'])+"](https://etherscan.io/address/"+str(logs['event']['activity'][0]['toAddress'])+"#tokentxns)"
+        from_address = "["+str(logs['event']['activity'][0]['fromAddress'])+"](https://polygonscan.com/address/"+str(logs['event']['activity'][0]['fromAddress'])+"#tokentxns)"
+        to_address = "["+str(logs['event']['activity'][0]['toAddress'])+"](https://polygonscan.com/address/"+str(logs['event']['activity'][0]['toAddress'])+"#tokentxns)"
         
         token_symbol = logs['event']['activity'][0]['asset']
-        token_address = "["+str(logs['event']['activity'][0]['rawContract']['address'])+"](https://etherscan.io/address/"+str(logs['event']['activity'][0]['rawContract']['address'])+")"
+        token_address = "["+str(logs['event']['activity'][0]['rawContract']['address'])+"](https://polygonscan.com/address/"+str(logs['event']['activity'][0]['rawContract']['address'])+")"
         
         value = str(round(logs['event']['activity'][0]['value']))
 
