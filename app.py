@@ -24,7 +24,7 @@ def notify():
       print(logs)
       
       category = ""
-      try:
+      /*try:
          category = logs['event']['activity'][0]['category']
       except:
          print("category not defined")
@@ -43,7 +43,7 @@ def notify():
 
         # create the text string
         message = f'*Token transfer:*\n{txhash}\nfrom {from_address} \nto {to_address}: \nvalue: {value} *{token_symbol}* {token_address}'
-        bot.send_message(chat_id=user_chat_id, text=message, parse_mode='MarkdownV2')
+        bot.send_message(chat_id=user_chat_id, text=message, parse_mode='MarkdownV2')*/
       
   return Response(status=200)
 
